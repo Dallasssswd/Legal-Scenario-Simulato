@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VerdictLab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <main class="app">
+    <header class="hero">
+      <h1>VerdictLab</h1>
+      <p class="subtitle">Think like a lawyer. Spot the issue. Choose the defense. Predict the outcome.</p>
+    </header>
+
+    <section class="card" id="start-screen">
+      <h2>Welcome</h2>
+      <p>
+        Test your legal reasoning with realistic scenarios from criminal, constitutional,
+        business, and cyber law.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>How it works</h3>
+          <p>Read a scenario, choose the strongest legal issue, then choose the best defense.</p>
+        </div>
+        <div class="info-box">
+          <h3>Goal</h3>
+          <p>Get the highest score possible and see how a court might view the case.</p>
+        </div>
+      </div>
+
+      <button id="start-btn" class="main-btn">Start Simulator</button>
+    </section>
+
+    <section class="card hidden" id="quiz-screen">
+      <div class="top-bar">
+        <span id="question-counter">Case 1 / 5</span>
+        <span id="score-display">Score: 0</span>
+      </div>
+
+      <h2 id="scenario-title">Scenario Title</h2>
+      <p id="scenario-text" class="scenario-text"></p>
+
+      <div class="question-block">
+        <h3>1. What is the strongest legal issue or charge?</h3>
+        <div id="issue-options" class="options"></div>
+      </div>
+
+      <div class="question-block">
+        <h3>2. What is the best defense?</h3>
+        <div id="defense-options" class="options"></div>
+      </div>
+
+      <button id="submit-btn" class="main-btn">Submit Answers</button>
+    </section>
+
+    <section class="card hidden" id="result-screen">
+      <h2>Case Result</h2>
+
+      <div class="result-box">
+        <p><strong>Correct Issue:</strong> <span id="correct-issue"></span></p>
+        <p><strong>Best Defense:</strong> <span id="correct-defense"></span></p>
+        <p><strong>Likely Outcome:</strong> <span id="case-outcome"></span></p>
+      </div>
+
+      <div class="explanation-box">
+        <h3>Why</h3>
+        <p id="case-explanation"></p>
+      </div>
+
+      <div class="result-actions">
+        <button id="next-btn" class="main-btn">Next Case</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="end-screen">
+      <h2>Final Verdict</h2>
+      <p id="final-score-text"></p>
+      <p id="final-message"></p>
+      <button id="restart-btn" class="main-btn">Play Again</button>
+    </section>
+  </main>
+
+  <script src="scenarios.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
